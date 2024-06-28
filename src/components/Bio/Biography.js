@@ -22,7 +22,7 @@ const Biography = ({ onAddToCart, bioProducts }) => {
             <Grid
               className={classes.categoryFeatured}
               container
-              justify="center"
+              justifyContent="center"
               spacing={1}
             >
               {bioProducts.map((product) => (

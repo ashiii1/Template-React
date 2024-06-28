@@ -15,9 +15,7 @@ import { Carousel } from "react-responsive-carousel";
 
 const Products = ({ products, onAddToCart, featureProducts }) => {
   const classes = useStyles();
-
   const [searchTerm, setSearchTerm] = useState("");
-
   const sectionRef = useRef(null);
 
   const handleInputClick = () => {
@@ -31,7 +29,6 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
       <img src={scrollImg} className={classes.scrollImg} />
       <div className={classes.hero}>
         <img className={classes.heroImg} src={logo1} height="720px" />
-
         <div className={classes.heroCont}>
           <h1 className={classes.heroHeader}>
             Discover Your Next Favorite Book Here.
@@ -105,31 +102,17 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
           showArrows={true}
           showStatus={false}
         >
+          {/* Directly use <img> tags with src attributes */}
           <div>
-            <Link to="manga">
-              <button
-                className={classes.categoryButton}
-                style={{ backgroundImage: `url(${mangaBg})` }}
-              ></button>
-            </Link>
+            <img className={classes.categoryButton} src={mangaBg} alt="Manga" />
             <div className={classes.categoryName}>Manga</div>
           </div>
           <div>
-            <Link to="biography">
-              <button
-                className={classes.categoryButton}
-                style={{ backgroundImage: `url(${bioBg})` }}
-              ></button>
-            </Link>
+            <img className={classes.categoryButton} src={bioBg} alt="Biography" />
             <div className={classes.categoryName}>Biography</div>
           </div>
           <div>
-            <Link to="fiction">
-              <button
-                className={classes.categoryButton}
-                style={{ backgroundImage: `url(${fictionBg})` }}
-              ></button>
-            </Link>
+            <img className={classes.categoryButton} src={fictionBg} alt="Fiction" />
             <div className={classes.categoryName}>Fiction</div>
           </div>
         </Carousel>
@@ -144,7 +127,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
             <Grid
               className={classes.contentFeatured}
               container
-              justify="center"
+              justifyContent="center"
               spacing={1}
             >
               {featureProducts.map((product) => (
@@ -155,7 +138,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
                   sm={5}
                   md={3}
                   lg={2}
-                  id="pro"
+                  key={product.id} // Ensure each grid item has a unique key
                 >
                   <Product product={product} onAddToCart={onAddToCart} />
                 </Grid>
@@ -196,21 +179,14 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
         <Grid
           className={classes.content}
           container
-          justify="center"
+          justifyContent="center"
           spacing={2}
         >
           {products
-            .filter((product) => {
-              if (searchTerm === "") {
-                return product;
-              } else if (
-                product.name
-                  .toLowerCase()
-                  .includes(searchTerm.toLocaleLowerCase())
-              ) {
-                return product;
-              }
-            })
+            .filter((product) =>
+              searchTerm === "" ||
+              product.name.toLowerCase().includes(searchTerm.toLowerCase())
+            )
             .map((product) => (
               <Grid
                 className={classes.content}
@@ -219,7 +195,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
                 sm={6}
                 md={4}
                 lg={3}
-                id="pro"
+                key={product.id} // Ensure each grid item has a unique key
               >
                 <Product product={product} onAddToCart={onAddToCart} />
               </Grid>
