@@ -3,8 +3,8 @@ import { Grid, InputAdornment, Input } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import Product from "./Product/Product.js";
 import useStyles from "./styles";
-import logo1 from "../../assets/Bookshop.gif";
-import scrollImg from "../../assets/scroll.gif";
+// import logo1 from "../../assets/Bookshop.gif";
+// import scrollImg from "../../assets/scroll.gif";
 import "../ProductView/style.css";
 import { Link } from "react-router-dom";
 import mangaBg from "../../assets/maxresdefault.jpg";
@@ -26,9 +26,9 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
   return (
     <main className={classes.mainPage}>
       <div className={classes.toolbar} />
-      <img src={scrollImg} className={classes.scrollImg} />
+      {/* <img src={scrollImg} className={classes.scrollImg} /> */}
       <div className={classes.hero}>
-        <img className={classes.heroImg} src={logo1} height="720px" />
+        {/* <img className={classes.heroImg} src={logo1} height="720px" /> */}
         <div className={classes.heroCont}>
           <h1 className={classes.heroHeader}>
             Discover Your Next Favorite Book Here.
