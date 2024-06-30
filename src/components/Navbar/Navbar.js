@@ -16,7 +16,7 @@ const Navbar = ({ totalItems }) => {
 
   return (
     <div>
-      <AppBar position="fixed" className={classes.appBar} color="inherit">
+      <AppBar position="fixed" className={classes.appBar} color="white">
         <Toolbar>
           <Typography
             component={Link}
@@ -26,12 +26,13 @@ const Navbar = ({ totalItems }) => {
             color="inherit"
           >
             <img
-              src={logo}
+              src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMnywqjMLWBSefb3MPTYXNnT6p5voyIU0YBw&s'}
               alt="Book Store App"
               height="50px"
+              width="60px"
               className={classes.image}
             />
-            <div>BOOKSHOP</div>
+            <div>BOOKSHELF</div>
           </Typography>
 
           <div className={classes.grow} />

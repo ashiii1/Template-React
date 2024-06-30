@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
   appBar: {
     color: "white",
     boxShadow: "none",
-    background: "#001524",
+    background: "#9c27b0",
     borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
     [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -33,7 +33,7 @@ export default makeStyles((theme) => ({
     },
   },
   image: {
-    marginRight: "10px",
+    marginRight: "20px",
   },
   menuButton: {
     marginRight: theme.spacing(2),

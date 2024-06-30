@@ -36,7 +36,7 @@ export default makeStyles((theme) => ({
     fontSize: 24,
     fontFamily: "Raleway",
     paddingBottom: 28,
-    width: 584,
+    width: 284,
   },
 
   contentHeader: {
