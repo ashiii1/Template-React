@@ -7,16 +7,32 @@ export default makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(20),
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(20),
+    // paddingBottom: theme.spacing(0),
   },
   hero: {
     flexDirection: "column",
-    height: "90vh",
+    height: "40vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: theme.spacing(20),
+    padding: theme.spacing(1),
     backgroundColor: "white",
+  },
+  heroCont: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundImage: `url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "50vh", // Adjust height as needed
+    padding: theme.spacing(34),
+    paddingTop: 34,
+
+    textAlign: "center",
+    color: "#001524",
   },
   heroHeader: {
     textAlign: "center",
@@ -83,7 +99,7 @@ export default makeStyles((theme) => ({
 
   categorySection: {
     backgroundColor: "#FFF",
-    paddingTop: theme.spacing(8),
+    paddingTop: theme.spacing(0.2),
     paddingBottom: theme.spacing(8),
   },
 
@@ -94,18 +110,18 @@ export default makeStyles((theme) => ({
     fontWeight: 500,
   },
 
-  categoryButton: {
-    fontFamily: "Poppins",
-    width: 280,
-    height: 280,
-    color: "#FFF",
-    borderRadius: 8,
-    fontSize: 60,
-    border: "none",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    "&:hover": { opacity: 0.8, transition: "ease-in-out .4s" },
-  },
+  // categoryButton: {
+  //   fontFamily: "Poppins",
+  //   width: 280,
+  //   height: 280,
+  //   color: "#FFF",
+  //   borderRadius: 8,
+  //   fontSize: 60,
+  //   border: "none",
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  //   "&:hover": { opacity: 0.8, transition: "ease-in-out .4s" },
+  // },
 
   categoryHeader: {
     textAlign: "center",
@@ -125,6 +141,56 @@ export default makeStyles((theme) => ({
     fontFamily: "Raleway",
   },
 
+  categoryNav: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: theme.spacing(2),
+  },
+  categoryContainer: {
+    display: "flex",
+    overflowX: "auto",
+    scrollBehavior: "smooth",
+    padding: theme.spacing(1),
+    gap: theme.spacing(2),
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
+  },
+  categoryButton: {
+    width: "150px",
+    height: "150px",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    border: "none",
+    borderRadius: "50%",
+    cursor: "pointer",
+    outline: "none",
+    transition: "transform 0.2s ease-in-out",
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
+  },scrollButton: {
+    background: "transparent",
+    border: "1px solid #ccc",
+    borderRadius: "50%",
+    width: 40,
+    height: 40,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    color: "#000",
+    outline: "none",
+    transition: "border-color 0.3s, color 0.3s",
+    "&:hover": {
+      borderColor: "#f1361d",
+      color: "#f1361d",
+    },
+   
+  
+},
   root: {
     flexGrow: 1,
   },
