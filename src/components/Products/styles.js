@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   mainPage: { flexGrow: 1, overflowX: "hidden", overflowY: "hidden" },
   content: {
@@ -8,7 +8,6 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(20),
     paddingTop: theme.spacing(20),
-    // paddingBottom: theme.spacing(0),
   },
   hero: {
     flexDirection: "column",
@@ -27,34 +26,33 @@ export default makeStyles((theme) => ({
     backgroundImage: `url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "50vh", // Adjust height as needed
-    padding: theme.spacing(34),
-    paddingTop: 34,
-
+    height: "40vh", // Adjust height as needed
+    padding: `${theme.spacing(4)}px 0`, // Add padding top and bottom
     textAlign: "center",
     color: "#001524",
+    marginTop: `calc(${theme.mixins.toolbar.minHeight}px + ${theme.spacing(4)}px)`, // Move closer to the navbar
   },
   heroHeader: {
-    textAlign: "center",
-    color: "#001524",
-    fontSize: 68,
+    fontSize: 48,
     fontFamily: "Poppins",
     fontWeight: "800",
-    letterSpacing: -3,
+    letterSpacing: -2,
     lineHeight: 0.9,
-    wordSpacing: 8,
-    width: 660,
+    wordSpacing: 4,
+    width: 860,
     paddingBottom: 8,
+    backgroundColor: "rgba(255, 255, 255, 0.7)", // Add background color for better readability
+    margin: "auto", // Center horizontally
   },
   heroDesc: {
-    textAlign: "center",
-    color: "#455A64",
     fontSize: 24,
     fontFamily: "Raleway",
-    paddingBottom: 28,
     width: 284,
+    backgroundColor: "rgba(255, 255, 255, 0.7)", // Add background color for better readability
+    margin: "auto", // Center horizontally
+    marginTop: theme.spacing(2), // Adjust top margin as needed
+    padding: theme.spacing(2),
   },
-
   contentHeader: {
     textAlign: "center",
     color: "#FFF",
@@ -67,7 +65,6 @@ export default makeStyles((theme) => ({
     letterSpacing: "-.8px",
     wordSpacing: "4px",
   },
-
   contentFeatured: {
     gap: 15,
     padding: theme.spacing(5),
@@ -82,11 +79,9 @@ export default makeStyles((theme) => ({
     paddingBottom: theme.spacing(10),
     backgroundColor: "#FFF",
   },
-
   carouselSection: {
     display: "none",
   },
-
   buttonSection: {
     display: "flex",
     justifyContent: "center",
@@ -96,33 +91,18 @@ export default makeStyles((theme) => ({
     gap: 28,
     paddingBottom: 28,
   },
-
   categorySection: {
     backgroundColor: "#FFF",
     paddingTop: theme.spacing(0.2),
-    paddingBottom: theme.spacing(8),
+    paddingBottom: theme.spacing(18),
+    marginTop: theme.spacing(4), // Adjust margin-top to move categories closer to hero section
   },
-
   categoryName: {
     fontFamily: "Poppins",
     color: "#001524",
     fontSize: 20,
     fontWeight: 500,
   },
-
-  // categoryButton: {
-  //   fontFamily: "Poppins",
-  //   width: 280,
-  //   height: 280,
-  //   color: "#FFF",
-  //   borderRadius: 8,
-  //   fontSize: 60,
-  //   border: "none",
-  //   backgroundSize: "cover",
-  //   backgroundPosition: "center",
-  //   "&:hover": { opacity: 0.8, transition: "ease-in-out .4s" },
-  // },
-
   categoryHeader: {
     textAlign: "center",
     color: "#001524",
@@ -132,7 +112,6 @@ export default makeStyles((theme) => ({
     letterSpacing: "-.8px",
     wordSpacing: "4px",
   },
-
   categoryDesc: {
     textAlign: "center",
     color: "#455A64",
@@ -140,7 +119,6 @@ export default makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     fontFamily: "Raleway",
   },
-
   categoryNav: {
     display: "flex",
     alignItems: "center",
@@ -170,7 +148,8 @@ export default makeStyles((theme) => ({
     "&:hover": {
       transform: "scale(1.1)",
     },
-  },scrollButton: {
+  },
+  scrollButton: {
     background: "transparent",
     border: "1px solid #ccc",
     borderRadius: "50%",
@@ -188,9 +167,7 @@ export default makeStyles((theme) => ({
       borderColor: "#f1361d",
       color: "#f1361d",
     },
-   
-  
-},
+  },
   root: {
     flexGrow: 1,
   },
@@ -375,3 +352,4 @@ export default makeStyles((theme) => ({
     },
   },
 }));
+export default useStyles;
