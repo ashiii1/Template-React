@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     width: 984,
     backgroundColor: "rgba(255, 255, 255, 0.7)", // Add background color for better readability
     margin: "auto", // Center horizontally
-    marginTop: theme.spacing(16), // Adjust top margin as needed
+    marginTop: theme.spacing(5), // Adjust top margin as needed
     padding: theme.spacing(2),
   },
   contentHeader: {
@@ -93,13 +93,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFF",
     paddingTop: theme.spacing(9.2),
     paddingBottom: theme.spacing(18),
-    marginTop: theme.spacing(4), // Adjust margin-top to move categories closer to hero section
+    marginTop: theme.spacing(6), // Adjust margin-top to move categories closer to hero section
   },
   categoryName: {
     fontFamily: "Poppins",
     color: "#001524",
-    fontSize: 20,
+    fontSize: 25,
     fontWeight: 500,
+    marginTop:theme.spacing(2)
   },
   categoryHeader: {
     textAlign: "center",
