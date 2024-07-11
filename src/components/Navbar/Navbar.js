@@ -54,8 +54,7 @@
 //   );
 // };
 
-// export default Navbar;
-import React from "react";
+// export default Navbar;import React from "react";
 import {
   AppBar,
   Toolbar,
@@ -84,7 +83,7 @@ const Navbar = ({ totalItems }) => {
             color="inherit"
           >
             <img
-              src={logo}
+              src={"https://tse1.mm.bing.net/th?id=OIP.ZMiKAmmH0CZvtYl3R0LJzQHaGP&pid=Api&P=0&h=180"}
               alt="Book Store App"
               height="50px"
               width="60px"
@@ -94,12 +93,7 @@ const Navbar = ({ totalItems }) => {
           </Typography>
 
           <div className={classes.grow} />
-          <Button component={Link} to="/best-sellers" color="inherit">
-            Best Sellers
-          </Button>
-          <Button component={Link} to="/discover-books" color="inherit">
-            Discover Books
-          </Button>
+         
           <Button component={Link} to="/about" color="inherit">
             About
           </Button>
@@ -120,5 +114,5 @@ const Navbar = ({ totalItems }) => {
     </div>
   );
 };
-///////////////////////////////////////////////////////////
+
 export default Navbar;

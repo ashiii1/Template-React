@@ -36,6 +36,7 @@ const Fiction = ({ onAddToCart, fictionProducts }) => {
                   md={3}
                   lg={2}
                   id="pro"
+                  key={product.id}
                 >
                   <Product product={product} onAddToCart={onAddToCart} />
                 </Grid>

@@ -36,6 +36,8 @@ const Manga = ({ onAddToCart, mangaProducts }) => {
                   md={3}
                   lg={2}
                   id="pro"
+                  key={product.id}
+
                 >
                   <Product product={product} onAddToCart={onAddToCart} />
                 </Grid>

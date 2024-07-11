@@ -219,25 +219,25 @@ import { Carousel } from "react-responsive-carousel";
 
 // URLs for category images
 const mangaBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://i.pinimg.com/736x/a2/d7/cf/a2d7cfaa19ea2704a2f47b5b8764d0dc.jpg";
 const bioBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://i.pinimg.com/736x/1c/70/c4/1c70c468e12564ab632a54ae16c0f64e.jpg";
 const fictionBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://www.fivespotgreenliving.com/images/blog-top-fiction-books-to-read.jpg";
 const fantasyBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://i.pinimg.com/736x/7f/82/4d/7f824d07119364dadc42f497e7aeb756.jpg";
 const scienceFictionBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://i.pinimg.com/originals/15/29/7a/15297acdd5e8bbcedb6c3023c6732c9b.png";
 const romanceBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://i.pinimg.com/originals/5c/ad/7f/5cad7fd56173b88e4a49b7bb7b4e4467.jpg"
 const mysteryBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://i.pinimg.com/originals/61/ce/61/61ce6101515b6fa87b9aa0b21a08d25f.png";
 const thrillerBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://i.pinimg.com/originals/65/ad/56/65ad569c18621b7e0520a55f9358d47f.jpg"
 const nonFictionBg =
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "https://www.pragmaticmom.com/wp-content/uploads/2017/02/nonfiction-books-for-kids.jpg";
 const historicalFictionBg = 
-  "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80";
+  "http://prodimage.images-bn.com/pimages/2940012897831_p0_v1_s1200x630.jpg";
 
 
 const Products = ({ products, onAddToCart, featureProducts }) => {
@@ -281,15 +281,11 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
           <h1 className={classes.heroHeader}>
             Discover Your Next Favorite Book Here.
           </h1>
-          <h3 className={classes.heroDesc} ref={sectionRef}>
-            Explore our curated collection of new and popular books to find your
-            next literary adventure.
-          </h3>
           <div className={classes.searchs}>
             <Input
               className={classes.searchb}
               type="text"
-              placeholder="Which book are you looking for?"
+              placeholder="Search For Books "
               onClick={handleInputClick}
               onChange={(event) => {
                 setSearchTerm(event.target.value);
@@ -300,7 +296,11 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
                 </InputAdornment>
               }
             />
-          </div>
+            </div>
+             <h3 className={classes.heroDesc} ref={sectionRef}>
+          Welcome to Book Haven, your BookShop site for all types of books! Find your perfect read today.
+          </h3>
+        
         </div>
       </div>
 
@@ -420,7 +420,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
         <>
           <div>
             <h3 className={classes.contentHeader}>
-              Best <span style={{ color: "#f1361d" }}>Sellers</span>
+              Best <span style={{ color: "#cc0aa8" }}>Sellers</span>
             </h3>
             <Grid
               className={classes.contentFeatured}
@@ -450,7 +450,7 @@ const Products = ({ products, onAddToCart, featureProducts }) => {
         {searchTerm === "" && (
           <>
             <h1 className={classes.booksHeader}>
-              Discover <span style={{ color: "#f1361d" }}>Books</span>
+              Discover <span style={{ color: "#ac09b2" }}>Books</span>
             </h1>
             <h3 className={classes.booksDesc}>
               Explore our comprehensive collection of books.

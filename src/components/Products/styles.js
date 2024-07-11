@@ -7,15 +7,14 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(20),
-    paddingTop: theme.spacing(20),
+    paddingTop: theme.spacing(10),
   },
   hero: {
     flexDirection: "column",
-    height: "40vh",
+    height: "65vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: theme.spacing(1),
     backgroundColor: "white",
   },
   heroCont: {
@@ -23,14 +22,14 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundImage: `url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80')`,
+    backgroundImage: `url('https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-simple-creative-reading-book-banner-image_194503.jpg')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "40vh", // Adjust height as needed
-    padding: `${theme.spacing(4)}px 0`, // Add padding top and bottom
+    height: "100vh", 
+    width:"190vh", // Adjust height as needed
     textAlign: "center",
     color: "#001524",
-    marginTop: `calc(${theme.mixins.toolbar.minHeight}px + ${theme.spacing(4)}px)`, // Move closer to the navbar
+    marginTop:theme.spacing(2)
   },
   heroHeader: {
     fontSize: 48,
@@ -39,18 +38,17 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: -2,
     lineHeight: 0.9,
     wordSpacing: 4,
-    width: 860,
-    paddingBottom: 8,
-    backgroundColor: "rgba(255, 255, 255, 0.7)", // Add background color for better readability
+    width: 660,
+    paddingBottom: 2,
     margin: "auto", // Center horizontally
   },
   heroDesc: {
     fontSize: 24,
     fontFamily: "Raleway",
-    width: 284,
+    width: 984,
     backgroundColor: "rgba(255, 255, 255, 0.7)", // Add background color for better readability
     margin: "auto", // Center horizontally
-    marginTop: theme.spacing(2), // Adjust top margin as needed
+    marginTop: theme.spacing(16), // Adjust top margin as needed
     padding: theme.spacing(2),
   },
   contentHeader: {
@@ -59,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 40,
     fontFamily: "Poppins",
     fontWeight: "bolder",
-    paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(15),
     backgroundColor: "#001524",
     margin: "0 !important",
     letterSpacing: "-.8px",
@@ -68,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   contentFeatured: {
     gap: 15,
     padding: theme.spacing(5),
-    paddingTop: theme.spacing(6),
+    paddingTop: theme.spacing(16),
     paddingBottom: theme.spacing(10),
     backgroundColor: "#001524",
   },
@@ -93,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   },
   categorySection: {
     backgroundColor: "#FFF",
-    paddingTop: theme.spacing(0.2),
+    paddingTop: theme.spacing(9.2),
     paddingBottom: theme.spacing(18),
     marginTop: theme.spacing(4), // Adjust margin-top to move categories closer to hero section
   },
@@ -136,36 +134,35 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   categoryButton: {
-    width: "150px",
-    height: "150px",
+    width: "300px",
+    height: "420px",
     backgroundSize: "cover",
     backgroundPosition: "center",
     border: "none",
-    borderRadius: "50%",
+    borderRadius: "8px", // Change from 50% to 8px for square shape with rounded corners
     cursor: "pointer",
     outline: "none",
     transition: "transform 0.2s ease-in-out",
     "&:hover": {
       transform: "scale(1.1)",
     },
-  },
-  scrollButton: {
-    background: "transparent",
-    border: "1px solid #ccc",
-    borderRadius: "50%",
-    width: 40,
-    height: 40,
+  },scrollButton: {
+    background: "#9c27b0", // Violet color
+    border: "none", // Remove the border
+    borderRadius: "50%", // Maintain circular shape
+    width: 60, // Increase the size of the button
+    height: 60, // Increase the size of the button
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "1.5rem",
+    fontSize: "2rem", // Increase the size of the arrow
     cursor: "pointer",
-    color: "#000",
+    color: "#000", // Black arrow color
     outline: "none",
-    transition: "border-color 0.3s, color 0.3s",
+    transition: "background-color 0.3s, color 0.3s",
     "&:hover": {
-      borderColor: "#f1361d",
-      color: "#f1361d",
+      backgroundColor: "#6A0DAD", // Darker violet on hover
+      color: "#000", // Ensure arrow remains black on hover
     },
   },
   root: {
@@ -177,8 +174,8 @@ const useStyles = makeStyles((theme) => ({
   },
   searchb: {
     backgroundColor: "white",
-    height: "80%",
-    width: "60%",
+    height: "100%",
+    width: "560px",
     padding: "12px",
     borderRadius: "6px",
     border: "1px solid #001524",
